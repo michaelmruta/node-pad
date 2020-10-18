@@ -1,70 +1,50 @@
-# Node-RED
+# Node-PAD
 
-http://nodered.org
+Node-PAD is Node-RED for iPad.
 
-[![Build Status](https://travis-ci.org/node-red/node-red.svg?branch=master)](https://travis-ci.org/node-red/node-red)
-[![Coverage Status](https://coveralls.io/repos/node-red/node-red/badge.svg?branch=master)](https://coveralls.io/r/node-red/node-red?branch=master)
+![Alt text](preview.png?raw=true "Preview")
 
-Low-code programming for event-driven applications.
-
-![Node-RED: Low-code programming for event-driven applications](http://nodered.org/images/node-red-screenshot.png)
-
-## Quick Start
-
-Check out http://nodered.org/docs/getting-started/ for full instructions on getting
-started.
-
-1. `sudo npm install -g --unsafe-perm node-red`
-2. `node-red`
-3. Open <http://localhost:1880>
-
-## Getting Help
-
-More documentation can be found [here](http://nodered.org/docs).
-
-For further help, or general discussion, please use the [Node-RED Forum](https://discourse.nodered.org) or [slack team](https://nodered.org/slack).
-
-## Developers
-
-If you want to run the latest code from git, here's how to get started:
-
-1. Clone the code:
-
-        git clone https://github.com/node-red/node-red.git
-        cd node-red
-
-2. Install the node-red dependencies
-
-        npm install
-
-3. Build the code
-
-        npm run build
-
-4. Run
-
-        npm start
-
-## Contributing
-
-Before raising a pull-request, please read our
-[contributing guide](https://github.com/node-red/node-red/blob/master/CONTRIBUTING.md).
-
-This project adheres to the [Contributor Covenant 1.4](http://contributor-covenant.org/version/1/4/).
- By participating, you are expected to uphold this code. Please report unacceptable
- behavior to any of the project's core team at team@nodered.org.
-
-## Authors
-
-Node-RED is a project of the [OpenJS Foundation](https://openjsf.org).
-
-It was created by [IBM Emerging Technology](https://www.ibm.com/blogs/emerging-technology/).
-
-* Nick O'Leary [@knolleary](http://twitter.com/knolleary)
-* Dave Conway-Jones [@ceejay](http://twitter.com/ceejay)
+A programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
 
+It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-tap.
 
-## Copyright and license
+Notice: This is not compatible with many nodes in the official repository due to ios security restrictions and device limitations.
 
-Copyright OpenJS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
+
+Pre-installed nodes:
+
+dashboard, ui-table ui-list ui-vega ui-lineargauge ui-value-trail ui-heatmap ui-media ui-led ui-level ui-state-trail ui-statechart ui-svg ui-contextmenu ui-week-schedule dashboard-bar-chart-data, alexa, email
+
+## References:
+
+Node-PAD: [https://apps.apple.com/us/app/node-pad/id1534470128](https://apps.apple.com/us/app/node-pad/id1534470128)<br/>
+Node-RED: [https://nodered.org/](https://nodered.org/)
+
+## About this fork
+
+This branch will be the official copy of what will be published on the app store. It is expected that there will be a lag from every official release of the original project.
+
+## Requests & Getting Help
+
+Feel free to post any issues that you may find in the app to this repo.
+
+If any requests and suggestions just contact me at meku@uchu-neko.com and add node-pad in your subject.
+
+## Milestones
+
+ ☐ merge v1.1.3 -> v1.2.1<br/>
+ ☐ the prebuilt admin authentication<br/>
+ ☐ admin dark theme that syncs with your ios settings<br/>
+ ☐ icloud folder for all your files and installed nodes<br/>
+ ☐ write a 'peertalk node' to enable the use of high speed tcp messaging on the USB port of the ios device<br/>
+ ☐ nodes for device data like ip address, battery, cpu, ram, disk, geolocation, accelerometer, etc.<br/>
+ ☐ enable the use of Bluetooth or BLE, (apple has a very restrict policy on the usage of this one)<br/>
+ ☐ enable the use of non-mfi ESC/POS thermal printer using the bluetooth<br/>
+
+
+## Copyright
+
+Node-RED is a trademark of OpenJS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
+
+Node-PAD is a port of Node-RED for iPhone/iPad and the author of this port is not affiliated with or endorsed by them.  
