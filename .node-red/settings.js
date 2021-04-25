@@ -23,7 +23,7 @@ module.exports = {
     // To listen on all IPv6 addresses, set uiHost to "::",
     // The following property can be used to listen on a specific interface. For
     // example, the following would only allow connections from the local machine.
-    //uiHost: "127.0.0.1",
+    uiHost: "127.0.0.1",
 
     // Retry time in milliseconds for MQTT connections
     mqttReconnectTime: 15000,
@@ -80,13 +80,13 @@ module.exports = {
     // the user's home directory. To use a different location, the following
     // property can be used
     //userDir: '/home/nol/.node-red/',
-    userDir: ".",
+    userDir: process.env.NODE_RED_HOME,
 
     // Node-RED scans the `nodes` directory in the userDir to find local node files.
     // The following property can be used to specify an additional directory to scan.
     // nodesDir: '/home/nol/.node-red/nodes',
-    nodesDir: process.env.NODE_RED_HOME + "/nodes/",
-    
+    nodesDir: process.env.NODE_RED_HOME + '/nodes',
+
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specify a different root path.
     // If set to false, this is disabled.
@@ -120,14 +120,14 @@ module.exports = {
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
     // property can be used. See http://nodered.org/docs/security.html for details.
-    //adminAuth: {
+    // adminAuth: {
     //    type: "credentials",
     //    users: [{
     //        username: "admin",
     //        password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
     //        permissions: "*"
     //    }]
-    //},
+    // },
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.
@@ -242,8 +242,8 @@ module.exports = {
     // can be accessed in a function block as:
     //    global.get("os")
     functionGlobalContext: {
-        os:require('os'),
-        _:require('lodash'),
+        // os:require('os'),
+        // _:require('lodash'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
     },
@@ -272,7 +272,7 @@ module.exports = {
     // palette. If a node's category is not in the list, the category will get
     // added to the end of the palette.
     // If not set, the following default order is used:
-    paletteCategories: ['subflows', 'ios device', 'common', 'function', 'network', 'sequence', 'parser', 'storage'],
+    paletteCategories: ['subflows', 'common', 'function', 'device', 'network', 'sequence', 'parser', 'storage'],
 
     // Configure the logging output
     logging: {
